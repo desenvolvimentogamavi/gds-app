@@ -1,0 +1,82 @@
+import React, {ReactNode, useContext, memo} from 'react';
+import {
+  View,
+  Modal,
+  ModalProps,
+  TouchableWithoutFeedback,
+  Image,
+  StyleSheet,
+} from 'react-native';
+
+import {Container, Padding} from './styles';
+import {ThemeContext} from 'styled-components';
+import {Markdown} from '../../../../components';
+import Button from '../../../../components/button';
+import TextInput from '../../../../components/textInput';
+
+type Props = ModalProps & {
+  children: ReactNode;
+  closeModal: () => void;
+};
+
+export const back = require('../../../../assets/Back.png');
+
+export function ModalLogin({children, closeModal, ...rest}: Props) {
+  const {
+    spaces: {x2, x1},
+  } = useContext<ITheme>(ThemeContext);
+
+  return (
+    <Modal
+      statusBarTranslucent
+      animationType="slide"
+      transparent={true}
+      {...rest}>
+      <View style={styles.container}>
+        <View style={styles.outerView}>
+          <View style={{flexDirection: 'row', marginTop: x2}}>
+            <TouchableWithoutFeedback onPress={closeModal}>
+              <Image
+                source={back}
+                tintColor="#000066"
+                style={{marginTop: x2, marginLeft: x2}}
+              />
+            </TouchableWithoutFeedback>
+          </View>
+          <Container>
+            <Padding>
+              <Markdown
+                types="h1"
+                value="Para entrar, digite o número da conta e a senha:"
+                color="blue"
+              />
+              <TextInput withoutBorder={true} placeholder="Login" />
+            </Padding>
+
+            <Button
+              text="ENTRAR"
+              textColor="white"
+              variant="primary"
+              style={{marginTop: x1}}
+            />
+          </Container>
+        </View>
+      </View>
+    </Modal>
+  );
+}
+export default memo(ModalLogin);
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: 'rgba(192,192,192,0.3)',
+  },
+  outerView: {
+    flex: 1,
+    backgroundColor: '#E6E6E6',
+    marginTop: 200,
+    borderTopRightRadius: 20,
+    borderTopLeftRadius: 20,
+  },
+});

@@ -1,18 +1,33 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {memo} from 'react';
 import {StyleSheet, Image} from 'react-native';
 import {Container, ButtonContainer} from './styles';
 import Button from '../../../../components/button';
+import {ModalLogin} from '../LoginScreen';
 
 const LandingScreen = () => {
+  const [openModal, setOpenModal] = useState(false);
+
+  function handleCloseModal() {
+    setOpenModal(false);
+  }
+  function handleOpenModal() {
+    setOpenModal(true);
+  }
+
   return (
     <Container>
       <Image
         style={styles.img}
         source={require('../../../../assets/logo_cores2.png')}
       />
+      <ModalLogin
+        visible={openModal}
+        closeModal={handleCloseModal}
+        children={undefined}
+      />
       <ButtonContainer>
-        <Button text={'Entrar'} />
+        <Button text={'Entrar'} onPress={handleOpenModal} />
       </ButtonContainer>
     </Container>
   );
