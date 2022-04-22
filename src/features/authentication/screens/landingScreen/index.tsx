@@ -1,6 +1,5 @@
 import React from 'react';
 import {memo} from 'react';
-import {Markdown} from '../../../../components';
 import {StyleSheet, Image} from 'react-native';
 import {Container, ButtonContainer} from './styles';
 import Button from '../../../../components/button';
@@ -13,12 +12,11 @@ const LandingScreen = () => {
         source={require('../../../../assets/logo_cores2.png')}
       />
       <ButtonContainer>
-        <Button text={'Entrar'}/>
+        <Button text={'Entrar'} />
       </ButtonContainer>
     </Container>
   );
 };
-
 
 export default memo(LandingScreen);
 
