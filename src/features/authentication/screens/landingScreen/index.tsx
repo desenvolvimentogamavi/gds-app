@@ -19,6 +19,7 @@ const LandingScreen = () => {
   );
 };
 
+
 export default memo(LandingScreen);
 
 const styles = StyleSheet.create({
