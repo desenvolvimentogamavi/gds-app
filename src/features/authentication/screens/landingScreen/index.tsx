@@ -2,8 +2,8 @@ import React, {useState} from 'react';
 import {memo} from 'react';
 import {StyleSheet, Image} from 'react-native';
 import {Container, ButtonContainer} from './styles';
-import Button from '../../../../components/button';
 import {ModalLogin} from '../LoginScreen';
+import {Button} from '../../../../components';
 
 const LandingScreen = () => {
   const [openModal, setOpenModal] = useState(false);
