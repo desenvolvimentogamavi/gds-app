@@ -92,7 +92,7 @@ const TextInput = (
       <Content
         onFocus={focused}
         withoutBackgroundInput={withoutBackgroundInput}
-        paddingLeft={paddingLeft ?? x3}
+        paddingLeft={paddingLeft ?? x2}
         withoutBorder={!!withoutBorder}>
         {mask ? (
           <InputWithMask
@@ -124,7 +124,7 @@ const TextInput = (
           />
         )}
         {insideLabel}
-        {!withoutBorder && !insideLabel && lockButton && (
+        {!insideLabel && lockButton && (
           <TouchableOpacity onPress={handleSetSecure}>
             <Icon
               name={!secure ? 'eye' : 'eye-slash'}

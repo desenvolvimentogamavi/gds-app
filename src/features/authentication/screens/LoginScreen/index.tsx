@@ -1,4 +1,4 @@
-import React, {ReactNode, useContext, memo} from 'react';
+import React, {ReactNode, useContext, memo, useCallback} from 'react';
 import {
   View,
   Modal,
@@ -13,6 +13,7 @@ import {ThemeContext} from 'styled-components';
 import {Markdown} from '../../../../components';
 import Button from '../../../../components/button';
 import TextInput from '../../../../components/textInput';
+import {useNavigation} from '@react-navigation/native';
 
 type Props = ModalProps & {
   children: ReactNode;
@@ -22,6 +23,12 @@ type Props = ModalProps & {
 export const back = require('../../../../assets/Back.png');
 
 export function ModalLogin({children, closeModal, ...rest}: Props) {
+  const {navigate} = useNavigation();
+
+  const navigateFeedScreen = useCallback(() => {
+    navigate('FeedStackNavigator', {screen: 'FeedScreen'});
+  }, [navigate]);
+
   const {
     spaces: {x2, x1, x4},
   } = useContext<ITheme>(ThemeContext);
@@ -53,7 +60,12 @@ export function ModalLogin({children, closeModal, ...rest}: Props) {
               <Line />
               <TextInput withoutBorder={true} placeholder="Login" />
               <Line />
-              <TextInput withoutBorder={true} placeholder="Senha" />
+              <TextInput
+                withoutBorder={true}
+                placeholder="Senha"
+                secureTextEntry
+                lockButton={true}
+              />
             </Padding>
 
             <Line />
@@ -61,6 +73,7 @@ export function ModalLogin({children, closeModal, ...rest}: Props) {
               text="ENTRAR"
               textColor="white"
               variant="primary"
+              onPress={navigateFeedScreen}
               style={{marginTop: x1}}
             />
           </Container>

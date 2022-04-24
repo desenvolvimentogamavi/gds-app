@@ -8,11 +8,11 @@ import {Button} from '../../../../components';
 const LandingScreen = () => {
   const [openModal, setOpenModal] = useState(false);
 
-  function handleCloseModal() {
-    setOpenModal(false);
-  }
   function handleOpenModal() {
     setOpenModal(true);
+  }
+  function handleCloseModal() {
+    setOpenModal(false);
   }
 
   return (

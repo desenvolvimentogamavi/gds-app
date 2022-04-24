@@ -7,8 +7,7 @@ interface ModalProviderProps {
 interface ModalContextDate {
   closeModal: () => void;
   openModal: () => void;
-  modalIsOpen: boolean;
-  // requestSendDrawer: () => void;
+  modalIsOpen: boolean | false;
 }
 
 export const ModalContext = createContext({} as ModalContextDate);
@@ -30,7 +29,6 @@ export function ModalProvider({children, ...rest}: ModalProviderProps) {
         closeModal,
         openModal,
         modalIsOpen,
-        // requestSendDrawer
       }}>
       {children}
     </ModalContext.Provider>
