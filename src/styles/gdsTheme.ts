@@ -20,7 +20,8 @@ export const GdsTheme: DefaultTheme & ITheme = {
       color: 'black',
     },
     h3: {
-      fontSize: 27,
+      fontFamily: 'Roboto-Medium',
+      fontSize: 18,
       color: 'black',
     },
     h4: {

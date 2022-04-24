@@ -25,7 +25,6 @@ const FeedStackNavigator = () => {
     headerTintColor: white,
     headerTitleAlign: 'center',
     headerBackVisible: true,
-
     headerRight: () => (
       <Image
         style={styles.img}
@@ -55,8 +54,9 @@ export default FeedStackNavigator;
 
 const styles = StyleSheet.create({
   img: {
-    width: 90,
-    height: 85,
+    width: 80,
+    height: 70,
+    marginTop: 5,
     left: 15,
     alignSelf: 'flex-end',
     // backgroundColor: 'red',

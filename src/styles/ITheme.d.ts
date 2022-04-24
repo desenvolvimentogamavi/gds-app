@@ -17,6 +17,7 @@ interface ITheme {
       color: string;
     };
     h3: {
+      fontFamily: string;
       fontSize: number;
       color: string;
     };
