@@ -21,6 +21,15 @@ export const Padding = styled.View`
     padding: ${x3}px;
   `}
 `;
+export const Line = styled.View`
+  ${({
+    theme: {
+      spaces: {x1},
+    },
+  }: ILoginScreenProps) => css`
+    padding: ${x1}px;
+  `}
+`;
 
 export const ContentPassword = styled.View`
   flex: 1;

@@ -39,14 +39,12 @@ export const Item = styled.View`
         : undefined
     };
     border-radius: ${variant === 'outline' ? x1 : x0}px;
-
     border-radius: ${variant === 'secondary' ? x1 : x0}px;
-
-    // border-width: ${variant === 'outline' ? 1 : 0}px;
     padding: ${withoutBorder ? x3 : x2}px;
     elevation: ${variant === 'outline' ? 0 : withoutBorder ? 8 : 3};
   `}
   align-items: center;
+  border-radius: 13px;
 `;
 
 export const ContentLoading = styled.View`

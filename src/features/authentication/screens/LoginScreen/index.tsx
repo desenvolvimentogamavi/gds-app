@@ -8,7 +8,7 @@ import {
   StyleSheet,
 } from 'react-native';
 
-import {Container, Padding} from './styles';
+import {Container, Line, Padding} from './styles';
 import {ThemeContext} from 'styled-components';
 import {Markdown} from '../../../../components';
 import Button from '../../../../components/button';
@@ -23,7 +23,7 @@ export const back = require('../../../../assets/Back.png');
 
 export function ModalLogin({children, closeModal, ...rest}: Props) {
   const {
-    spaces: {x2, x1},
+    spaces: {x2, x1, x4},
   } = useContext<ITheme>(ThemeContext);
 
   return (
@@ -38,8 +38,8 @@ export function ModalLogin({children, closeModal, ...rest}: Props) {
             <TouchableWithoutFeedback onPress={closeModal}>
               <Image
                 source={back}
-                tintColor="#000066"
-                style={{marginTop: x2, marginLeft: x2}}
+                tintColor="#2075D8"
+                style={{marginTop: x2, marginLeft: x2, width: x2, height: x4}}
               />
             </TouchableWithoutFeedback>
           </View>
@@ -50,9 +50,13 @@ export function ModalLogin({children, closeModal, ...rest}: Props) {
                 value="Para entrar, digite o número da conta e a senha:"
                 color="blue"
               />
+              <Line />
               <TextInput withoutBorder={true} placeholder="Login" />
+              <Line />
+              <TextInput withoutBorder={true} placeholder="Senha" />
             </Padding>
 
+            <Line />
             <Button
               text="ENTRAR"
               textColor="white"
