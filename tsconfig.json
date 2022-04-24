@@ -10,16 +10,6 @@
     "noEmit": true,
     "strict": true,
     "target": "esnext",
-    "baseUrl": "./src",                       /* Base directory to resolve non-absolute module names. */
-    "paths": {
-      "@src/*": ["./src/*"],
-      "@components/*": ["./src/components/*"],
-      "@assets/*": ["./src/assets/*"],
-      "@styles/*": ["./src/styles/*"],
-      "@navigation/*": ["./src/navigation/*"],
-      "@utils/*": ["./src/utils/*"],
-      "@templates/*": ["./src/templates/*"],
-    }, 
   },
   "exclude": [
     "node_modules",
