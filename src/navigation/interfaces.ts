@@ -11,4 +11,5 @@ export type AuthenticationStackParamList = {
 
 export type FeedStackParamList = {
   FeedScreen: undefined;
+  SelectSaleScreen: undefined;
 };

@@ -3,7 +3,7 @@ import {AuthenticationStackParamList} from './interfaces';
 import {NativeStackNavigationOptions} from '@react-navigation/native-stack';
 import React, {useContext} from 'react';
 import {ThemeContext} from 'styled-components/native';
-import {FeedScreen, LandingScreen} from '../features/authentication';
+import {LandingScreen} from '../features';
 
 const Stack = createNativeStackNavigator<AuthenticationStackParamList>();
 

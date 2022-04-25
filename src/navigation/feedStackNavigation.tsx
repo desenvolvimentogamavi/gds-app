@@ -3,7 +3,7 @@ import {NativeStackNavigationOptions} from '@react-navigation/native-stack';
 import React, {useContext} from 'react';
 import {Image, StyleSheet} from 'react-native';
 import {ThemeContext} from 'styled-components/native';
-import {FeedScreen} from '../features/authentication';
+import {FeedScreen, SelectSaleScreen} from '../features';
 import {FeedStackParamList} from './interfaces';
 
 const Stack = createNativeStackNavigator<FeedStackParamList>();
@@ -42,9 +42,12 @@ const FeedStackNavigator = () => {
       <Stack.Screen
         name="FeedScreen"
         component={FeedScreen}
-        options={{
-          ...options,
-        }}
+        options={{...options}}
+      />
+      <Stack.Screen
+        name="SelectSaleScreen"
+        component={SelectSaleScreen}
+        options={{...options, title: 'VENDA DIRETA'}}
       />
     </Stack.Navigator>
   );
