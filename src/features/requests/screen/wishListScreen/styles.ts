@@ -6,7 +6,7 @@ interface IPayOptionsScreen {
 
 const Container = styled.View`
   width: 100%;
-  padding: 0 16px;
+  padding: 0 18px;
   flex: 1;
 `;
 
@@ -57,7 +57,10 @@ const TextCard = styled.Text`
   font-size: 16px;
   color: #fff;
   margin-top: 10px;
-  /* opacity: 0.5; */
+`;
+const Space = styled.View`
+  margin-top: 10px;
+  padding: 0 18px;
 `;
 
 export default {
@@ -67,4 +70,5 @@ export default {
   TitleCard,
   TextCard,
   SearchContainer,
+  Space,
 };

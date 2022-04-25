@@ -3,40 +3,34 @@ import {FlatList, View} from 'react-native';
 import Styled from './styles';
 import Icon from 'react-native-vector-icons/FontAwesome5';
 import {ToggleButton} from '../../../../components/toggleButton';
-import {withTiming, Easing, useSharedValue} from 'react-native-reanimated';
+// import {withTiming, Easing, useSharedValue} from 'react-native-reanimated';
 import {ThemeContext} from 'styled-components/native';
+import TextInputSearch from '../../../../components/textInputSearch';
 
 const WishListScreen = () => {
   const {
     spaces: {x2},
     color: {white},
   } = useContext<ITheme>(ThemeContext);
-  const [pos, setPos] = useState(false);
+  const [check, setCheck] = useState(false);
 
-  // const offset = useSharedValue(0);
-
-  // const handleSetPositionToogle = useCallback(() => {
-  //   setPos(!pos);
-  //   setToggleButtons([
-  //     {
-  //       isActive: pos,
-  //       title: 'Buscar',
-  //     },
-  //     {
-  //       isActive: !pos,
-  //       title: 'Ordem',
-  //     },
-  //     {
-  //       isActive: pos,
-  //       title: 'Tipo',
-  //     },
-  //   ]);
-
-  //   offset.value = withTiming(pos ? 0 : 154, {
-  //     duration: 500,
-  //     easing: Easing.out(Easing.exp),
-  //   });
-  // }, [pos, offset]);
+  const handleSetPositionToogle = useCallback(() => {
+    setCheck(!check);
+    setToggleButtons([
+      {
+        isActive: check,
+        title: 'Buscar',
+      },
+      {
+        isActive: !check,
+        title: 'Nome',
+      },
+      {
+        isActive: check,
+        title: 'Bairro',
+      },
+    ]);
+  }, [check]);
 
   const [toggleButtons, setToggleButtons] = useState([
     {
@@ -111,12 +105,14 @@ const WishListScreen = () => {
 
   return (
     <Styled.Container>
-      <ToggleButton
-        // onPress={}
-        toggleButtons={toggleButtons}
-      />
+      <Styled.Space>
+        <ToggleButton
+          onPress={handleSetPositionToogle}
+          toggleButtons={toggleButtons}
+        />
+      </Styled.Space>
       <Styled.SearchContainer>
-        {/* <TextInputSearch placeholder="Buscar" /> */}
+        <TextInputSearch placeholder="Buscar" />
       </Styled.SearchContainer>
       <FlatList
         data={items}
