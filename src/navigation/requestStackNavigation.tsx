@@ -7,6 +7,7 @@ import {NativeStackNavigationOptions} from '@react-navigation/native-stack';
 import React, {useCallback, useContext} from 'react';
 import {Image, StyleSheet, TouchableOpacity} from 'react-native';
 import {ThemeContext} from 'styled-components/native';
+import OrderDataScreen from '../features/requests/screen/orderDataScreen';
 import WishListScreen from '../features/requests/screen/wishListScreen';
 import {RequestStackParamList} from './interfaces';
 
@@ -66,6 +67,11 @@ const RequestStackNavigator = () => {
       <Stack.Screen
         name="WishListScreen"
         component={WishListScreen}
+        options={{...options}}
+      />
+      <Stack.Screen
+        name="OrderDataScreen"
+        component={OrderDataScreen}
         options={{...options}}
       />
     </Stack.Navigator>

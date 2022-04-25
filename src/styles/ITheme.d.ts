@@ -13,6 +13,7 @@ interface ITheme {
       color: string;
     };
     h2: {
+      fontFamily: string;
       fontSize: number;
       color: string;
     };
@@ -26,6 +27,7 @@ interface ITheme {
       color: string;
     };
     p: {
+      fontFamily: string;
       fontSize: number;
       color: string;
     };

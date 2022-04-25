@@ -16,7 +16,8 @@ export const GdsTheme: DefaultTheme & ITheme = {
       color: 'white',
     },
     h2: {
-      fontSize: 30,
+      fontFamily: 'Roboto-Bold',
+      fontSize: 32,
       color: 'black',
     },
     h3: {
@@ -29,7 +30,8 @@ export const GdsTheme: DefaultTheme & ITheme = {
       color: 'black',
     },
     p: {
-      fontSize: 17,
+      fontFamily: 'Roboto-Medium',
+      fontSize: 16,
       color: 'black',
     },
     pBold: {

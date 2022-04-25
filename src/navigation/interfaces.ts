@@ -22,4 +22,5 @@ export type SelectSaleStackParamList = {
 
 export type RequestStackParamList = {
   WishListScreen: undefined;
+  OrderDataScreen: undefined;
 };

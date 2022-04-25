@@ -6,13 +6,23 @@ import {ToggleButton} from '../../../../components/toggleButton';
 // import {withTiming, Easing, useSharedValue} from 'react-native-reanimated';
 import {ThemeContext} from 'styled-components/native';
 import TextInputSearch from '../../../../components/textInputSearch';
+import {useNavigation} from '@react-navigation/native';
+import {NativeStackNavigationProp} from '@react-navigation/native-stack';
+import {RequestStackParamList} from '../../../../navigation/interfaces';
 
 const WishListScreen = () => {
+  const {navigate} =
+    useNavigation<NativeStackNavigationProp<RequestStackParamList>>();
+  const [check, setCheck] = useState(false);
+
   const {
     spaces: {x2},
     color: {white},
   } = useContext<ITheme>(ThemeContext);
-  const [check, setCheck] = useState(false);
+
+  const navigateOrderDataScreen = useCallback(() => {
+    navigate('OrderDataScreen');
+  }, [navigate]);
 
   const handleSetPositionToogle = useCallback(() => {
     setCheck(!check);
@@ -119,7 +129,7 @@ const WishListScreen = () => {
         showsHorizontalScrollIndicator={false}
         keyExtractor={item => item.id.toString()}
         renderItem={({item}) => (
-          <Styled.Card>
+          <Styled.Card onPress={navigateOrderDataScreen}>
             <Styled.CardContent>
               <View>
                 <Styled.TitleCard>{item.title}</Styled.TitleCard>
