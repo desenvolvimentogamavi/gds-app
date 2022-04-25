@@ -6,16 +6,19 @@ import Icon from 'react-native-vector-icons/FontAwesome5';
 import {ThemeContext} from 'styled-components/native';
 import {Markdown} from '../../../../components';
 import Card from '../../../../components/card';
-import {FeedStackParamList} from '../../../../navigation/interfaces';
+import {RootParamList} from '../../../../navigation/interfaces';
 
 import {Container} from './styles';
 
 const FeedScreen = () => {
-  const {navigate} =
-    useNavigation<NativeStackNavigationProp<FeedStackParamList>>();
+  const {navigate} = useNavigation<NativeStackNavigationProp<RootParamList>>();
+
+  const navigateWishListScreen = useCallback(() => {
+    navigate('RequestStackNavigator', {screen: 'WishListScreen'});
+  }, [navigate]);
 
   const navigateSelectSaleScreen = useCallback(() => {
-    navigate('SelectSaleScreen');
+    navigate('SelectSaleStackNavigator', {screen: 'SelectSaleScreen'});
   }, [navigate]);
 
   const {
@@ -23,7 +26,7 @@ const FeedScreen = () => {
   } = useContext<ITheme>(ThemeContext);
   return (
     <Container>
-      <TouchableNativeFeedback>
+      <TouchableNativeFeedback onPress={navigateWishListScreen}>
         <Card
           // eslint-disable-next-line react-native/no-inline-styles
           style={{

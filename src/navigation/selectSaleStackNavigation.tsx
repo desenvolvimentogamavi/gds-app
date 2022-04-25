@@ -7,14 +7,14 @@ import {NativeStackNavigationOptions} from '@react-navigation/native-stack';
 import React, {useCallback, useContext} from 'react';
 import {Image, StyleSheet, TouchableOpacity} from 'react-native';
 import {ThemeContext} from 'styled-components/native';
-import {FeedScreen} from '../features';
-import {FeedStackParamList} from './interfaces';
+import {SelectSaleScreen} from '../features';
+import {SelectSaleStackParamList} from './interfaces';
 
-const Stack = createNativeStackNavigator<FeedStackParamList>();
+const Stack = createNativeStackNavigator<SelectSaleStackParamList>();
 
-const FeedStackNavigator = () => {
+const SelectSaleStackNavigator = () => {
   const {dispatch} =
-    useNavigation<NativeStackNavigationProp<FeedStackParamList>>();
+    useNavigation<NativeStackNavigationProp<SelectSaleStackParamList>>();
 
   const navigateGoBack = useCallback(() => {
     dispatch(
@@ -22,7 +22,7 @@ const FeedStackNavigator = () => {
         index: 1,
         routes: [
           {
-            name: 'AuthenticationStackNavigator',
+            name: 'FeedStackNavigator',
           },
         ],
       }),
@@ -61,18 +61,18 @@ const FeedStackNavigator = () => {
   } as NativeStackNavigationOptions;
   return (
     <Stack.Navigator
-      initialRouteName="FeedScreen"
+      initialRouteName="SelectSaleScreen"
       screenOptions={{contentStyle: {backgroundColor: '#C4C4C4'}}}>
       <Stack.Screen
-        name="FeedScreen"
-        component={FeedScreen}
-        options={{...options}}
+        name="SelectSaleScreen"
+        component={SelectSaleScreen}
+        options={{...options, title: 'VENDA DIRETA'}}
       />
     </Stack.Navigator>
   );
 };
 
-export default FeedStackNavigator;
+export default SelectSaleStackNavigator;
 
 const styles = StyleSheet.create({
   img: {
