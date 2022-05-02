@@ -35,6 +35,7 @@ interface ITextInputProps extends TextInputProps {
   optionsMask?: TextInputMaskOptionProp;
   mask?: TextInputMaskTypeProp;
   onFocus?: (e: NativeSyntheticEvent<TextInputFocusEventData>) => void;
+  autoFocus?: boolean | undefined;
 }
 
 const TextInput = (
@@ -51,6 +52,7 @@ const TextInput = (
     mask,
     optionsMask,
     defaultValue,
+    autoFocus,
     ...rest
   }: ITextInputProps,
   ref: any,
@@ -113,7 +115,7 @@ const TextInput = (
           <Input
             ref={inputElementRef}
             {...rest}
-            autoFocus
+            autoFocus={autoFocus}
             value={defaultValue}
             leftBorder={leftBorder}
             placeholderTextColor={focused ? blue : gray}
