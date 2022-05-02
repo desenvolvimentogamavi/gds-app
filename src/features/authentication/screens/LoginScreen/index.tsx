@@ -68,6 +68,7 @@ export function ModalLogin({children, closeModal, ...rest}: Props) {
                   secureTextEntry
                   lockButton={true}
                   autoFocus={false}
+                  keyboardType="number-pad"
                 />
               </Padding>
 
