@@ -40,7 +40,7 @@ const SelectSaleScreen = () => {
             }}>
             <Markdown types="h3" color="white" value="Botijão P13" />
           </View>
-          <Icon name="chevron-right" size={x2} color={'#fff'} />
+          <Icon name="chevron-right" size={x3} color={'#fff'} />
         </Card>
       </TouchableNativeFeedback>
 
@@ -65,13 +65,12 @@ const SelectSaleScreen = () => {
             }}>
             <Markdown types="h3" color="white" value="Botijão P45" />
           </View>
-          <Icon name="chevron-right" size={x2} color={'#fff'} />
+          <Icon name="chevron-right" size={x3} color={'#fff'} />
         </Card>
       </TouchableNativeFeedback>
 
-      <TouchableNativeFeedback>
+      {/* <TouchableNativeFeedback>
         <Card
-          // eslint-disable-next-line react-native/no-inline-styles
           style={{
             padding: 50,
             paddingHorizontal: x3,
@@ -92,11 +91,10 @@ const SelectSaleScreen = () => {
           </View>
           <Icon name="chevron-right" size={x2} color={'#fff'} />
         </Card>
-      </TouchableNativeFeedback>
+      </TouchableNativeFeedback> */}
 
-      <TouchableNativeFeedback>
+      {/* <TouchableNativeFeedback>
         <Card
-          // eslint-disable-next-line react-native/no-inline-styles
           style={{
             padding: 50,
             paddingHorizontal: x3,
@@ -117,7 +115,7 @@ const SelectSaleScreen = () => {
           </View>
           <Icon name="chevron-right" size={x2} color={'#fff'} />
         </Card>
-      </TouchableNativeFeedback>
+      </TouchableNativeFeedback> */}
     </Container>
   );
 };

@@ -6,5 +6,5 @@ export const Container = styled.View`
 `;
 
 export const Space = styled.View`
-  margin-bottom: 100px;
+  margin-bottom: 50px;
 `;

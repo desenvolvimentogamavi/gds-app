@@ -46,7 +46,7 @@ export function ModalLogin({children, closeModal, ...rest}: Props) {
               <Image
                 source={back}
                 tintColor="#2075D8"
-                style={{marginTop: x2, marginLeft: x2, width: x2, height: x4}}
+                style={{marginLeft: x2, width: x2, height: x4}}
               />
             </TouchableWithoutFeedback>
           </View>
@@ -94,7 +94,7 @@ const styles = StyleSheet.create({
   outerView: {
     flex: 1,
     backgroundColor: '#E6E6E6',
-    marginTop: 170,
+    marginTop: 150,
     borderTopRightRadius: 20,
     borderTopLeftRadius: 20,
   },

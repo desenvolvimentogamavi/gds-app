@@ -17,9 +17,9 @@ const FeedScreen = () => {
     navigate('RequestStackNavigator', {screen: 'WishListScreen'});
   }, [navigate]);
 
-  // const navigateSelectSaleScreen = useCallback(() => {
-  //   navigate('SelectSaleStackNavigator', {screen: 'SelectSaleScreen'});
-  // }, [navigate]);
+  const navigateSelectSaleScreen = useCallback(() => {
+    navigate('SelectSaleStackNavigator', {screen: 'SelectSaleScreen'});
+  }, [navigate]);
 
   const {
     spaces: {x2, x1, x3},
@@ -47,11 +47,11 @@ const FeedScreen = () => {
             }}>
             <Markdown types="h3" color="white" value="PEDIDO" />
           </View>
-          <Icon name="chevron-right" size={x2} color={'#fff'} />
+          <Icon name="chevron-right" size={x3} color={'#fff'} />
         </Card>
       </TouchableNativeFeedback>
 
-      {/* <TouchableNativeFeedback onPress={navigateSelectSaleScreen}>
+      <TouchableNativeFeedback onPress={navigateSelectSaleScreen}>
         <Card
           // eslint-disable-next-line react-native/no-inline-styles
           style={{
@@ -72,13 +72,12 @@ const FeedScreen = () => {
             }}>
             <Markdown types="h3" color="white" value="VENDA DIRETA" />
           </View>
-          <Icon name="chevron-right" size={x2} color={'#fff'} />
+          <Icon name="chevron-right" size={x3} color={'#fff'} />
         </Card>
       </TouchableNativeFeedback>
 
-      <TouchableNativeFeedback>
+      {/* <TouchableNativeFeedback>
         <Card
-          // eslint-disable-next-line react-native/no-inline-styles
           style={{
             padding: 50,
             paddingHorizontal: x3,
@@ -99,11 +98,10 @@ const FeedScreen = () => {
           </View>
           <Icon name="chevron-right" size={x2} color={'#fff'} />
         </Card>
-      </TouchableNativeFeedback>
+      </TouchableNativeFeedback> */}
 
-      <TouchableNativeFeedback>
+      {/* <TouchableNativeFeedback>
         <Card
-          // eslint-disable-next-line react-native/no-inline-styles
           style={{
             padding: 50,
             paddingHorizontal: x3,
