@@ -117,6 +117,9 @@ const SelectSaleScreen = () => {
         </Card>
       </TouchableNativeFeedback> */}
     </Container>
+
+
+
   );
 };
 
