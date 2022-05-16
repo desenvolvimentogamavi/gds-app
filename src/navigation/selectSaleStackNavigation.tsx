@@ -7,7 +7,7 @@ import {NativeStackNavigationOptions} from '@react-navigation/native-stack';
 import React, {useCallback, useContext} from 'react';
 import {Image, StyleSheet, TouchableOpacity} from 'react-native';
 import {ThemeContext} from 'styled-components/native';
-import {SelectSaleScreen} from '../features';
+import {ProductValueScreen, SelectSaleScreen} from '../features';
 import {SelectSaleStackParamList} from './interfaces';
 
 const Stack = createNativeStackNavigator<SelectSaleStackParamList>();
@@ -66,6 +66,11 @@ const SelectSaleStackNavigator = () => {
       <Stack.Screen
         name="SelectSaleScreen"
         component={SelectSaleScreen}
+        options={{...options, title: 'VENDA DIRETA'}}
+      />
+      <Stack.Screen
+        name="ProductValueScreen"
+        component={ProductValueScreen}
         options={{...options, title: 'VENDA DIRETA'}}
       />
     </Stack.Navigator>

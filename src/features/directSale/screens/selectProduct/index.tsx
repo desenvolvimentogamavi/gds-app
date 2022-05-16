@@ -1,12 +1,22 @@
-import React, {memo, useContext} from 'react';
+import React, {memo, useCallback, useContext} from 'react';
 import {TouchableNativeFeedback, View} from 'react-native';
 import {ThemeContext} from 'styled-components/native';
 import {Markdown} from '../../../../components';
 import Card from '../../../../components/card';
 import {Container, Space} from './styles';
 import Icon from 'react-native-vector-icons/FontAwesome5';
+import {useNavigation} from '@react-navigation/native';
+import {NativeStackNavigationProp} from '@react-navigation/native-stack';
+import {SelectSaleStackParamList} from '../../../../navigation/interfaces';
 
 const SelectSaleScreen = () => {
+  const {navigate} =
+    useNavigation<NativeStackNavigationProp<SelectSaleStackParamList>>();
+
+  const navigateProductValueScreen = useCallback(() => {
+    navigate('ProductValueScreen');
+  }, [navigate]);
+
   const {
     spaces: {x2, x1, x3},
   } = useContext<ITheme>(ThemeContext);
@@ -16,10 +26,11 @@ const SelectSaleScreen = () => {
         types="h1"
         color="blue"
         value={'Selecione o Produto'}
+        // eslint-disable-next-line react-native/no-inline-styles
         style={{textAlign: 'center'}}
       />
       <Space />
-      <TouchableNativeFeedback>
+      <TouchableNativeFeedback onPress={navigateProductValueScreen}>
         <Card
           // eslint-disable-next-line react-native/no-inline-styles
           style={{
@@ -44,7 +55,7 @@ const SelectSaleScreen = () => {
         </Card>
       </TouchableNativeFeedback>
 
-      <TouchableNativeFeedback>
+      <TouchableNativeFeedback onPress={navigateProductValueScreen}>
         <Card
           // eslint-disable-next-line react-native/no-inline-styles
           style={{
@@ -117,9 +128,6 @@ const SelectSaleScreen = () => {
         </Card>
       </TouchableNativeFeedback> */}
     </Container>
-
-
-
   );
 };
 

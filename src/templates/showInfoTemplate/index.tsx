@@ -81,7 +81,7 @@ const ShowInfoTemplate = ({
       <ContentButton>
         {submit && showButton && (
           <Button
-            text={'Ir para o GPS'}
+            text={'Aceitar pedido'}
             loading={!!loading}
             variant="primary"
             textColor="white"
@@ -91,14 +91,7 @@ const ShowInfoTemplate = ({
           <>
             <Margin />
             <Button
-              text="Ir para o pagamento"
-              hasIcon={false}
-              textColor="white"
-              variant="primary"
-            />
-            <Margin />
-            <Button
-              text="Registrar falha na entrega"
+              text="Cancelar pedido"
               hasIcon={false}
               textColor="white"
               variant="primary"
@@ -111,6 +104,14 @@ const ShowInfoTemplate = ({
               variant="primary"
               onPress={navigateToOrderDataScreen}
             />
+            <Margin />
+            {/* <Button
+              text="Retornar aos pedidos"
+              hasIcon={false}
+              textColor="white"
+              variant="primary"
+              onPress={navigateToOrderDataScreen}
+            /> */}
           </>
         )}
       </ContentButton>

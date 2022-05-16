@@ -35,10 +35,10 @@ const WishListScreen = () => {
         isActive: !check,
         title: 'Nome',
       },
-      // {
-      //   isActive: !!check,
-      //   title: 'Bairro',
-      // },
+      {
+        isActive: !!check,
+        title: 'Bairro',
+      },
     ]);
   }, [check]);
 
@@ -51,10 +51,10 @@ const WishListScreen = () => {
       isActive: false,
       title: 'Nome',
     },
-    // {
-    //   isActive: true,
-    //   title: 'Bairro',
-    // },
+    {
+      isActive: false,
+      title: 'Bairro',
+    },
   ]);
   const items = [
     {
