@@ -8,6 +8,7 @@ import React, {useCallback, useContext} from 'react';
 import {Image, StyleSheet, TouchableOpacity} from 'react-native';
 import {ThemeContext} from 'styled-components/native';
 import {ProductValueScreen, SelectSaleScreen} from '../features';
+import ConfirmPaymentScreen from '../features/directSale/screens/confirmPayment';
 import {SelectSaleStackParamList} from './interfaces';
 
 const Stack = createNativeStackNavigator<SelectSaleStackParamList>();
@@ -71,6 +72,11 @@ const SelectSaleStackNavigator = () => {
       <Stack.Screen
         name="ProductValueScreen"
         component={ProductValueScreen}
+        options={{...options, title: 'VENDA DIRETA'}}
+      />
+      <Stack.Screen
+        name="ConfirmPaymentScreen"
+        component={ConfirmPaymentScreen}
         options={{...options, title: 'VENDA DIRETA'}}
       />
     </Stack.Navigator>

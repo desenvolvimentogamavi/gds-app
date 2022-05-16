@@ -19,6 +19,7 @@ export type FeedStackParamList = {
 export type SelectSaleStackParamList = {
   SelectSaleScreen: undefined;
   ProductValueScreen: undefined;
+  ConfirmPaymentScreen: undefined;
 };
 
 export type RequestStackParamList = {
