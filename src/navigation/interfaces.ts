@@ -20,6 +20,7 @@ export type SelectSaleStackParamList = {
   SelectSaleScreen: undefined;
   ProductValueScreen: undefined;
   ConfirmPaymentScreen: undefined;
+  RegistrationSuccessScreen: undefined;
 };
 
 export type RequestStackParamList = {

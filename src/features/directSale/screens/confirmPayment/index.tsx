@@ -1,9 +1,26 @@
 import {View} from 'react-native';
-import React from 'react';
+import React, {useCallback, useState} from 'react';
 import {styles} from './styles';
 import {Button, Markdown} from '../../../../components';
+import {useNavigation} from '@react-navigation/native';
+import {NativeStackNavigationProp} from '@react-navigation/native-stack';
+import {
+  FeedStackParamList,
+  SelectSaleStackParamList,
+} from '../../../../navigation/interfaces';
 
 const ConfirmPaymentScreen = () => {
+  const {navigate} =
+    useNavigation<NativeStackNavigationProp<SelectSaleStackParamList>>();
+
+  const navigateRegistrationSuccessScreen = useCallback(() => {
+    navigate('RegistrationSuccessScreen');
+  }, [navigate]);
+
+  const navigateFeedScreen = useCallback(() => {
+    navigate('FeedStackNavigator', {screen: 'FeedScreen'});
+  }, [navigate]);
+
   return (
     <View style={styles.container}>
       <Markdown
@@ -13,10 +30,10 @@ const ConfirmPaymentScreen = () => {
         style={{fontSize: 38, lineHeight: 57, padding: 25}}
       />
       <View style={{justifyContent: 'flex-end', flex: 1, marginBottom: 30}}>
-        <Button text={'SIM'} />
+        <Button text={'SIM'} onPress={navigateRegistrationSuccessScreen} />
       </View>
       <View style={{marginBottom: 30}}>
-        <Button text={'NÃO'} />
+        <Button text={'NÃO'} onPress={navigateFeedScreen} />
       </View>
     </View>
   );
