@@ -17,7 +17,7 @@ const ProductValueScreen = () => {
   return (
     <View style={styles.container}>
       <Markdown
-        value={'Botijão \nValor \nR$100,00'}
+        value={'Botijão \nValor \nR$110,00'}
         types="h3"
         color={'blue'}
         style={{fontSize: 38, lineHeight: 60, padding: 25}}
