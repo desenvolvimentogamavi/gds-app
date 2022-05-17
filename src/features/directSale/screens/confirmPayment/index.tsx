@@ -18,7 +18,7 @@ const ConfirmPaymentScreen = () => {
   }, [navigate]);
 
   const navigateFeedScreen = useCallback(() => {
-    navigate('FeedStackNavigator', {screen: 'FeedScreen'});
+    navigate('ProductValueScreen');
   }, [navigate]);
 
   return (
