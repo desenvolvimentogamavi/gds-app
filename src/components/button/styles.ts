@@ -15,13 +15,13 @@ export const Item = styled.View`
   ${({
     theme: {
       color: {orange, white, gray},
-      spaces: {x0, x1, x2, x3},
+      spaces: {x0, x1, x2},
     },
     variant,
     disabled,
     withoutBorder,
   }: IButton) => css`
-    margin: 0 20px
+    margin: 0 23px
     background-color: ${
       variant === 'secondary'
         ? white
@@ -40,7 +40,7 @@ export const Item = styled.View`
     };
     border-radius: ${variant === 'outline' ? x1 : x0}px;
     border-radius: ${variant === 'secondary' ? x1 : x0}px;
-    padding: ${withoutBorder ? x3 : x2}px;
+    padding: ${withoutBorder ? x2 : x2}px;
     elevation: ${variant === 'outline' ? 0 : withoutBorder ? 8 : 3};
   `}
   align-items: center;
@@ -69,7 +69,7 @@ export const Text = styled.Text`
       ? color.black
       : color.white};
     opacity: ${disabled ? 0.5 : 1};
-    font-size: 18px;
+    font-size: 20px;
   `}
   font-family: 'Arial-Bold';
   font-weight: bold;

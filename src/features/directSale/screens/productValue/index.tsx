@@ -17,10 +17,10 @@ const ProductValueScreen = () => {
   return (
     <View style={styles.container}>
       <Markdown
-        value={'Botijão \nValor \nR$110,00'}
-        types="h3"
+        value={'Botijão P13\nValor \nR$110,00'}
+        types="h1"
         color={'blue'}
-        style={{fontSize: 38, lineHeight: 60, padding: 25}}
+        style={{fontSize: 32, lineHeight: 48, padding: 23}}
       />
       <View style={{justifyContent: 'flex-end', flex: 1, marginBottom: 30}}>
         <Button text={'Pagar'} onPress={navigateConfirmPaymentScreen} />

@@ -24,7 +24,7 @@ const RegistrationSuccessScreen = () => {
     <View style={styles.container}>
       <Markdown
         value={'Registro efetuado com\nsucesso.'}
-        types="h3"
+        types="h1"
         color={'blue'}
         style={{fontSize: 38, lineHeight: 57, padding: 25}}
       />

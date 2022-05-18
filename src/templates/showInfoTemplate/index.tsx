@@ -11,6 +11,9 @@ import {
   ContentButton,
 } from './styles';
 import {Button, Markdown} from '../../components';
+import {NativeStackNavigationProp} from '@react-navigation/native-stack';
+import {SelectSaleStackParamList} from '../../navigation/interfaces';
+import ProductDataScreen from '../../features/requests/screen/productData';
 
 interface IShowInfoTemplate {
   title?: string;
