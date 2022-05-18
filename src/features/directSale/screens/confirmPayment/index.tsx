@@ -24,7 +24,7 @@ const ConfirmPaymentScreen = () => {
   return (
     <View style={styles.container}>
       <Markdown
-        value={'Confirmar o \npagamento?'}
+        value={'Confirmar  \npagamento?'}
         types="h3"
         color={'blue'}
         style={{fontSize: 38, lineHeight: 57, padding: 25}}
