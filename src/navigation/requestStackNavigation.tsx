@@ -9,6 +9,9 @@ import {Image, StyleSheet, TouchableOpacity} from 'react-native';
 import {ThemeContext} from 'styled-components/native';
 import OrderDataScreen from '../features/requests/screen/orderDataScreen';
 import WishListScreen from '../features/requests/screen/wishListScreen';
+import ConfirmScreen from '../templates/confirm';
+import ProductDataScreen from '../templates/productData';
+import SuccessScreen from '../templates/success';
 import {RequestStackParamList} from './interfaces';
 
 const Stack = createNativeStackNavigator<RequestStackParamList>();
@@ -72,6 +75,21 @@ const RequestStackNavigator = () => {
       <Stack.Screen
         name="OrderDataScreen"
         component={OrderDataScreen}
+        options={{...options}}
+      />
+      <Stack.Screen
+        name="ProductDataScreen"
+        component={ProductDataScreen}
+        options={{...options}}
+      />
+      <Stack.Screen
+        name="ConfirmScreen"
+        component={ConfirmScreen}
+        options={{...options}}
+      />
+      <Stack.Screen
+        name="SuccessScreen"
+        component={SuccessScreen}
         options={{...options}}
       />
     </Stack.Navigator>

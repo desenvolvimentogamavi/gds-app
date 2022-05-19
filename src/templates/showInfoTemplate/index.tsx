@@ -12,8 +12,10 @@ import {
 } from './styles';
 import {Button, Markdown} from '../../components';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
-import {SelectSaleStackParamList} from '../../navigation/interfaces';
-import ProductDataScreen from '../../features/requests/screen/productData';
+import {
+  RequestStackParamList,
+  SelectSaleStackParamList,
+} from '../../navigation/interfaces';
 
 interface IShowInfoTemplate {
   title?: string;
@@ -39,6 +41,12 @@ const ShowInfoTemplate = ({
   showButton = true,
   titleCustomized,
 }: IShowInfoTemplate) => {
+  const {navigate} =
+    useNavigation<NativeStackNavigationProp<RequestStackParamList>>();
+  const navigateProductDataScreen = useCallback(() => {
+    navigate('ProductDataScreen');
+  }, [navigate]);
+
   const {dispatch} = useNavigation();
 
   const navigateToOrderDataScreen = useCallback(() => {
@@ -53,6 +61,12 @@ const ShowInfoTemplate = ({
       }),
     );
   }, [dispatch]);
+
+  // const {navigate} =
+  //   useNavigation<NativeStackNavigationProp<RequestStackParamList>>();
+  // const navigateProductDataScreen = useCallback(() => {
+  //   navigate('ProductDataScreen');
+  // }, [navigate]);
 
   return (
     <BaseView>
@@ -88,6 +102,7 @@ const ShowInfoTemplate = ({
             loading={!!loading}
             variant="primary"
             textColor="white"
+            onPress={navigateProductDataScreen}
           />
         )}
         {isProof && (
