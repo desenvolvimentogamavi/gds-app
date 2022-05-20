@@ -9,7 +9,9 @@ import {Image, StyleSheet, TouchableOpacity} from 'react-native';
 import {ThemeContext} from 'styled-components/native';
 import OrderDataScreen from '../features/requests/screen/orderDataScreen';
 import WishListScreen from '../features/requests/screen/wishListScreen';
+import CancelOrderScreen from '../templates/cancelOrder';
 import ConfirmScreen from '../templates/confirm';
+import DeregistrationScreen from '../templates/deregistration';
 import ProductDataScreen from '../templates/productData';
 import SuccessScreen from '../templates/success';
 import {RequestStackParamList} from './interfaces';
@@ -90,6 +92,16 @@ const RequestStackNavigator = () => {
       <Stack.Screen
         name="SuccessScreen"
         component={SuccessScreen}
+        options={{...options}}
+      />
+      <Stack.Screen
+        name="CancelOrderScreen"
+        component={CancelOrderScreen}
+        options={{...options}}
+      />
+      <Stack.Screen
+        name="DeregistrationScreen"
+        component={DeregistrationScreen}
         options={{...options}}
       />
     </Stack.Navigator>

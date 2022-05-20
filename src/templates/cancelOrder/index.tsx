@@ -6,27 +6,27 @@ import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import {RequestStackParamList} from '../../navigation/interfaces';
 import {Button, Markdown} from '../../components';
 
-const ConfirmScreen = () => {
+const CancelOrderScreen = () => {
   const {navigate} =
     useNavigation<NativeStackNavigationProp<RequestStackParamList>>();
-  const navigateSuccessScreen = useCallback(() => {
-    navigate('SuccessScreen');
+  const navigateDeregistrationScreen = useCallback(() => {
+    navigate('DeregistrationScreen');
   }, [navigate]);
 
   const navigateFeedScreen = useCallback(() => {
-    navigate('ProductDataScreen');
+    navigate('OrderDataScreen');
   }, [navigate]);
 
   return (
     <View style={styles.container}>
       <Markdown
-        value={'Confirmar o \npagamento?'}
+        value={'Confirmar o \ncancelamento do \npedido?'}
         types="h1"
         color={'blue'}
         style={{fontSize: 38, lineHeight: 57, padding: 25}}
       />
       <View style={{justifyContent: 'flex-end', flex: 1, marginBottom: 30}}>
-        <Button text={'SIM'} onPress={navigateSuccessScreen} />
+        <Button text={'SIM'} onPress={navigateDeregistrationScreen} />
       </View>
       <View style={{marginBottom: 30}}>
         <Button text={'NÃO'} onPress={navigateFeedScreen} />
@@ -34,4 +34,4 @@ const ConfirmScreen = () => {
     </View>
   );
 };
-export default ConfirmScreen;
+export default CancelOrderScreen;

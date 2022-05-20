@@ -47,6 +47,10 @@ const ShowInfoTemplate = ({
     navigate('ProductDataScreen');
   }, [navigate]);
 
+  const navigateCancelOrderScreen = useCallback(() => {
+    navigate('CancelOrderScreen');
+  }, [navigate]);
+
   const {dispatch} = useNavigation();
 
   const navigateToOrderDataScreen = useCallback(() => {
@@ -113,6 +117,7 @@ const ShowInfoTemplate = ({
               hasIcon={false}
               textColor="white"
               variant="primary"
+              onPress={navigateCancelOrderScreen}
             />
             <Margin />
             <Button

@@ -29,4 +29,6 @@ export type RequestStackParamList = {
   ProductDataScreen: undefined;
   ConfirmScreen: undefined;
   SuccessScreen: undefined;
+  CancelOrderScreen: undefined;
+  DeregistrationScreen: undefined;
 };
