@@ -21,26 +21,23 @@ export const Item = styled.View`
     disabled,
     withoutBorder,
   }: IButton) => css`
-    margin: 0 23px
-    background-color: ${
-      variant === 'secondary'
-        ? white
-        : variant === 'outline'
-        ? 'transparent'
-        : disabled
-        ? '#D1D4D8'
-        : orange
-    };
-    border-color: ${
-      variant === 'secondary'
-        ? orange
-        : variant === 'outline'
-        ? gray
-        : undefined
-    };
+    margin: 0px 25px;
+    height: 50px;
+    background-color: ${variant === 'secondary'
+      ? white
+      : variant === 'outline'
+      ? 'transparent'
+      : disabled
+      ? '#D1D4D8'
+      : orange};
+    border-color: ${variant === 'secondary'
+      ? orange
+      : variant === 'outline'
+      ? gray
+      : undefined};
     border-radius: ${variant === 'outline' ? x1 : x0}px;
     border-radius: ${variant === 'secondary' ? x1 : x0}px;
-    padding: ${withoutBorder ? x2 : x2}px;
+    padding: 13px;
     elevation: ${variant === 'outline' ? 0 : withoutBorder ? 8 : 3};
   `}
   align-items: center;
@@ -69,7 +66,7 @@ export const Text = styled.Text`
       ? color.black
       : color.white};
     opacity: ${disabled ? 0.5 : 1};
-    font-size: 20px;
+    font-size: 18px;
   `}
   font-family: 'Arial-Bold';
   font-weight: bold;

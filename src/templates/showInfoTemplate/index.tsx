@@ -127,7 +127,6 @@ const ShowInfoTemplate = ({
               variant="primary"
               onPress={navigateToOrderDataScreen}
             />
-            <Margin />
             {/* <Button
               text="Retornar aos pedidos"
               hasIcon={false}
