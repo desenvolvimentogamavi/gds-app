@@ -18,7 +18,7 @@ const ProductDataScreen = () => {
         value={'Dados do pedido \nValor \nR$110,00'}
         types="h2"
         color={'blue'}
-        style={{fontSize: 32, lineHeight: 48, padding: 23}}
+        style={{fontSize: 32, lineHeight: 45, padding: 23}}
       />
       <View style={{justifyContent: 'flex-end', flex: 1, marginBottom: 30}}>
         <Button text={'Pagar'} onPress={navigateConfirmScreen} />

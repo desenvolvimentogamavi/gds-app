@@ -26,7 +26,7 @@ const DeregistrationScreen = () => {
         value={'Registro de \ncancelamento \nefetuado com \nsucesso.'}
         types="h1"
         color={'blue'}
-        style={{fontSize: 38, lineHeight: 57, padding: 25}}
+        style={{fontSize: 32, lineHeight: 45, padding: 25}}
       />
       <View
         style={{
