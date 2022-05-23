@@ -20,7 +20,7 @@ const ProductValueScreen = () => {
         value={'Botijão \nValor \nR$110,00'}
         types="h3"
         color={'blue'}
-        style={{fontSize: 38, lineHeight: 60, padding: 25}}
+        style={{fontSize: 32, lineHeight: 45, padding: 25}}
       />
       <View style={{justifyContent: 'flex-end', flex: 1, marginBottom: 30}}>
         <Button text={'Pagar'} onPress={navigateConfirmPaymentScreen} />
