@@ -21,7 +21,7 @@ const CancelOrderScreen = () => {
     <View style={styles.container}>
       <Markdown
         value={'Confirmar o \ncancelamento do \npedido?'}
-        types="h1"
+        types="h2"
         color={'blue'}
         style={{fontSize: 32, lineHeight: 45, padding: 25}}
       />

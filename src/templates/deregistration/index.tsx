@@ -24,7 +24,7 @@ const DeregistrationScreen = () => {
     <View style={styles.container}>
       <Markdown
         value={'Registro de \ncancelamento \nefetuado com \nsucesso.'}
-        types="h1"
+        types="h2"
         color={'blue'}
         style={{fontSize: 32, lineHeight: 45, padding: 25}}
       />
