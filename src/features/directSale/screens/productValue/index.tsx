@@ -1,4 +1,4 @@
-import {Text, View} from 'react-native';
+import {View} from 'react-native';
 import React, {useCallback} from 'react';
 import {styles} from './styles';
 import {Button, Markdown} from '../../../../components';
@@ -20,7 +20,7 @@ const ProductValueScreen = () => {
         value={'Botijão P13\nValor \nR$110,00'}
         types="h1"
         color={'blue'}
-        style={{fontSize: 32, lineHeight: 48, padding: 23}}
+        style={{fontSize: 32, lineHeight: 45, padding: 25}}
       />
       <View style={{justifyContent: 'flex-end', flex: 1, marginBottom: 30}}>
         <Button text={'Pagar'} onPress={navigateConfirmPaymentScreen} />

@@ -27,9 +27,9 @@ const ConfirmPaymentScreen = () => {
         value={'Confirmar o \npagamento?'}
         types="h1"
         color={'blue'}
-        style={{fontSize: 38, lineHeight: 57, padding: 25}}
+        style={{fontSize: 32, lineHeight: 45, padding: 25}}
       />
-      <View style={{justifyContent: 'flex-end', flex: 1, marginBottom: 30}}>
+      <View style={{justifyContent: 'flex-end', flex: 1, marginBottom: 16}}>
         <Button text={'SIM'} onPress={navigateRegistrationSuccessScreen} />
       </View>
       <View style={{marginBottom: 30}}>
