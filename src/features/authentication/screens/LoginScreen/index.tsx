@@ -7,12 +7,11 @@ import {
   Image,
   StyleSheet,
   Alert,
-  TextInput,
 } from 'react-native';
 
 import {Container, Line, Padding} from './styles';
 import {ThemeContext} from 'styled-components';
-import {Markdown} from '../../../../components';
+import {Markdown, TextInput} from '../../../../components';
 import Button from '../../../../components/button';
 
 import {useNavigation} from '@react-navigation/native';
@@ -101,21 +100,19 @@ export function ModalLogin({children, closeModal, ...rest}: Props) {
               <TextInput 
                 value={login} 
                 onChangeText={text => setLogin(text)} 
-                // withoutBorder={true} 
-                style={{backgroundColor: '#6c6c6c'}}
+                withoutBorder={true} 
                 placeholder="Login" 
               />
                 <Line />
               <TextInput
                 value={password}
                 onChangeText={text => setPassword(text)}
-                // withoutBorder={true}
+                withoutBorder={true}
                 placeholder="Senha"
-                // secureTextEntry
-                // lockButton={true}
+                secureTextEntry
+                lockButton={true}
                 autoFocus={false}
-                style={{backgroundColor: '#6c6c6c'}}
-                keyboardType="number-pad"
+                keyboardType="numbers-and-punctuation"
               />
             </Padding>
 
