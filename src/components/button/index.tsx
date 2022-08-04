@@ -29,7 +29,7 @@ const Button = ({
   ...rest
 }: IButton) => {
   const {
-    color: {orange},
+    color: {orange, white},
   } = useContext<ITheme>(ThemeContext);
 
   return (
@@ -40,7 +40,7 @@ const Button = ({
       <Item withoutBorder={withoutBorder} variant={variant} disabled={disabled}>
         {loading ? (
           <ContentLoading>
-            <ActivityIndicator size="small" color={orange} />
+            <ActivityIndicator size="small" color={white} />
           </ContentLoading>
         ) : (
           <Text textColor={textColor} disabled={disabled} variant={variant}>

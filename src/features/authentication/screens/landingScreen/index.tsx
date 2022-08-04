@@ -27,7 +27,7 @@ const LandingScreen = () => {
         children={undefined}
       />
       <ButtonContainer>
-        <Button text={'Entrar'} onPress={handleOpenModal} />
+        <Button text={'Pedro Paga Salário'} onPress={handleOpenModal} />
       </ButtonContainer>
     </Container>
   );
